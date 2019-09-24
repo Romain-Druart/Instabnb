@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+
+
+        {% for voyage in voyage1 %}
+            {% if voyage.id == id %}
+                <p>{{ voyage.id }}</p>
+                <p>{{ voyage.title }}</p>
+                <p>{{ voyage.content }}</p>
+                <p>{{ voyage.price }}</p>
+                <p>{{ voyage.createdDate|date("d/m/y") }}</p>
+            {% endif %}
+        {% endfor %}
+
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+{#
+    {{ dump(lesgens) }}
+
+    {{ random(['Romain', 'Iris']) }} {# affiche un element de ce tableau
+<br><br>
+
+    {% for i in range(100, 49) %} {# affiche une liste de chiffre de 100 à 49
+        {{ i }},
+    {% endfor %}
+<br><br>
+
+    {% set alphabet = range('a', 'z') %}
+
+    {% for i in alphabet %}
+        {{ i|upper ~ ', ' }}
+    {% endfor %}
+<br><br>
+
+    {% if lesgens|length >= 0 %}
+    {% for legens in lesgens %}
+        {{ legens.prenom ~ ' ' ~ legens.nom }} <br>
+    {% endfor %}
+        {% else %}
+        {{ 'La tableau ne s affiche pas' }}
+    {% endif %}
+    <br>
+    <br>
+
+    {{ ladate|date("d/m/y") }}
+    {{ ladate|date("m") }}
+    {{ ladate|date("d") }}
+    {{ ladate|date("y") }}
+
+    <br><br>
+    {{ include('product/product-detail.html.twig') }}
+
+
+
+
+
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/Users/Romain Dev/Documents/School/Licence/23-27 sept/Nightly_Wolf/src/Controller/DetailController.php'|file_link(0) }}">src/Controller/DetailController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/Users/Romain Dev/Documents/School/Licence/23-27 sept/Nightly_Wolf/templates/detail/index.html.twig'|file_link(0) }}">templates/detail/index.html.twig</a></code></li>
+    </ul>
+
+    #}
