@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: white;
+    font-family:"Comic Sans MS", sans-serif;
 }
 
 H1 {
@@ -12,5 +13,5 @@ a {
 }
 
 a:visited {
-    color: #b0b0b0;
+    color: #ccdade;
 }
