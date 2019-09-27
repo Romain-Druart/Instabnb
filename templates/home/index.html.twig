@@ -10,6 +10,11 @@
 
 <div class="example-wrapper">
 
+    Hi {{ name }}! You've got a test email.
+
+    Thanks!
+    <br><br><br>
+
     {% for voyage in voyage1 %}
         {{ voyage.id }}<br>
         <a href="{{ path('detail', {id: voyage.id}) }}">{{ voyage.title }}</a><br>

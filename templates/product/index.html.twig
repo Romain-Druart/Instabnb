@@ -8,13 +8,14 @@
 </style>
 
 <div class="example-wrapper">
+    <h1>Hello {{ controller_name }}!</h1>
 
-    {% for annonce in Annonce1 %}
-        {{ annonce.id }}<br>
-        <a href="{{ path('detail', {id: annonce.id}) }}">{{ annonce.title }}</a><br>
-        {{ annonce.content }}<br>
-        {{ annonce.price }}<br>
-        {{ annonce.createdDate|date("y/m/y") }}<br>
+    {% for produit in products %}
+        {{ produit.title }}
+        {{ produit.price }}
+        {{ produit.content }}
+        {{ produit.createdAt|date('d/m/y') }}<br><br>
+
     {% endfor %}
 
     <br>
